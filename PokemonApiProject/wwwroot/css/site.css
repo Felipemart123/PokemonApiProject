@@ -1,0 +1,51 @@
+﻿* {
+    
+    background-color: #0d0e0f;
+}
+
+
+
+button {
+    cursor: pointer;
+}
+
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .searchBox input {
+        border-radius: 8px 0 0 8px;
+        border: 0;
+        outline: none;
+        height: 36px;
+        padding: 4px 16px;
+        background-color: white;
+        color: #000;
+    }
+
+    .searchBox button {
+        border-radius: 0 8px 8px 0;
+        border: 0;
+        height: 36px;
+        padding: 4px 16px;
+        background-color: white;
+    }
+
+.pokemonBox {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+    .pokemonBox img {
+        width: 200px;
+    }
+
+    .pokemonBox p {
+        margin-top: 1rem;
+    }
+
+    

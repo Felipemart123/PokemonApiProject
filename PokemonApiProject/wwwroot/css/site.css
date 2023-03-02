@@ -1,41 +1,12 @@
 ﻿
-.pokemon-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 100%;
-}
 
-    .pokemon-table td {
-        padding: 10px;
-        text-align: center;
-    }
-
-.pokemon {
-    position: relative;
-}
-
-    .pokemon img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .pokemon h1 {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        padding: 10px;
-        background-color: #fff;
-        border: 1px solid #000;
-        border-radius: 5px;
-    }
-
-.form {
+form {
+    height: auto;
     margin: auto;
     width: 50%;
     border: 3px solid green;
     padding: 10px;
 }
+
+
+   

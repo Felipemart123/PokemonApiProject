@@ -1,16 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
+﻿
 @model PokemonInfo
 
-
-@using (Html.BeginForm("Search", "Home", "Get"))
-{
-    <label asp-for="PokemonName" class="control-label" style="color:white"></label>
-    <input type="text" name="PokemonName" placeholder="Search for Pokemon name..." class="form-control" value="" />
-    <input type="submit" value="Search" class="btn btn-primary" />
-    
     
 
-}
+@*@using (Html.BeginForm(  "Search", "Home" , FormMethod.Post))
+        {
+        <div class="form-group">
+            <label asp-for="PokemonName" class="control-label" style="color:white"></label>
+            <input type="text" name="PokemonName" placeholder="Search for Pokemon name..." class="form-control" value="" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    }*@
+
+<form asp-action="Search" asp-controller="Home" method="post">
+    <h1>Find your Pokemon!</h1>
+    
+    <button type="submit" class="btn btn-primary">Lets go!</button>
+</form>
+
+
+

@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Numerics;
 using Microsoft.AspNetCore.Mvc;
 using PokemonApiProject.Models;
 
@@ -13,20 +14,18 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
-        var pokemon = new PokemonInfo();
-
-        return View(pokemon);
+    
+    public IActionResult Index(PokemonInfo pokemon)
+    {        
+        return View(pokemon); 
     }
-
+     
+    
     public IActionResult Search(PokemonInfo pokemon)
     {
-        pokemon = APIRepository.GetPokemonName(pokemon.PokemonName);
-        APIRepository.GetPokemonName(pokemon.PokemonName);
+        var root = APIRepository.GetPokemonInfo(pokemon.PokemonName);
         
-
-        return View(pokemon);
+        return View(root);
     }
 
     public IActionResult Privacy()

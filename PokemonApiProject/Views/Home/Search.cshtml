@@ -1,21 +1,26 @@
 ﻿@model Root
 
-<table class="pokemon-table">
-    @for (int i = 0; i < Model.results.Count; i += 14)
-    {
-        <tr>
-            @for (int j = i; j < i + 14 && j < Model.results.Count; j++)
-            {
-                <td>
-                    <a target ="_blank" href="https://pokemondb.net/pokedex/@(Model.results[j].name)">
-                        <div class="pokemon">
-                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/@(j+1).png" alt="@Model.results[j].name">
-                            <p>@Model.results[j].name</p>
-                        </div>
-                    </a>
-                </td>
-            }
-        </tr> 
-    }
-</table>
+    
 
+
+        <table class="pokemon-table">
+            @for (int i = 0; i < Model.results.Count; i += 14)
+            {
+                <tr>
+                    @for (int j = i; j < i + 14 && j < Model.results.Count; j++)
+                    {
+                        <td>
+                            <a target="_blank" href="https://pokemondb.net/pokedex/@(Model.results[j].name)">
+                                <div class="pokemon">
+                                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/@(j+1).png" alt="@Model.results[j].name">
+                                    <p>@Model.results[j].name</p>
+                                </div>
+                            </a>
+                        </td>
+                    }
+                </tr>
+
+            }
+        </table>
+
+    

@@ -19,7 +19,7 @@ namespace PokemonApiProject.Models
         public static Root GetPokemonInfo(string pokemonName)
         {
             var client = new HttpClient();
-            var response = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151").Result;
+            var response = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1008").Result;
             var root = JsonConvert.DeserializeObject<Root>(response);
 
             return root;
